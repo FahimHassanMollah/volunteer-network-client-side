@@ -34,8 +34,8 @@ const VolunterCategoryAll = () => {
                
             </Container>
             <Container>
-            <Row className="d-flex justify-content-around">
-                   <Col md={8} lg={12}>
+            <Row className="">
+                   <Col md={8} lg={12} className="mx-auto">
                   
                     
                     <CardColumns className=""  >

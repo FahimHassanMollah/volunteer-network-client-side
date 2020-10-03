@@ -18,7 +18,9 @@ const Header = () => {
                             <Link to={`/events`} className="btn px-4  link"> Events </Link>
                             <Link to={`/blog`} className="btn px-4  link">  Blog  </Link>
                         </Nav>
+                        <Link to={'/login'}>
                         <Button className="px-4 mx-2  link" variant="primary">Register</Button>
+                        </Link>
                         <Button className="px-4 mx-2 link" variant="dark">Admin</Button>
                     </Navbar.Collapse>
                 </Container>

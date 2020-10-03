@@ -6,7 +6,8 @@ const VolunterCategoryCard = (props) => {
    
     return (
         <div>
-           <Link>
+          
+           <Link to={`/volunterRegister/${props.item.categoryName}`}>
            <Card className="text-center text-white" style={{ width: '18rem' }}>
                <div className="rounded border">
                <Card.Img className="img-thumbnail" style={{width:"300px"}} variant="top" src={props.item.image} />
@@ -18,6 +19,7 @@ const VolunterCategoryCard = (props) => {
            </Link>
            
         </div>
+      
     );
 };
 

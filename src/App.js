@@ -9,13 +9,26 @@ import {
   Link
 } from "react-router-dom";
 import VolunterCategoryAll from './components/Header/VolunterCategoryAll/VolunterCategoryAll';
+import LogIn from './components/LogIn/LogIn';
+import VolunterRegister from './components/VolunteerRegister/VolunterRegister';
 
 function App() {
   return (
     <div className="">
      <Router>
-      <Header></Header>
-      <VolunterCategoryAll></VolunterCategoryAll>
+        <Switch>
+          <Route exact path="/">
+              <Header></Header>
+              <VolunterCategoryAll></VolunterCategoryAll>
+          </Route>
+          <Route exact path="/login">
+            <LogIn></LogIn>
+          </Route>
+          <Route exact path="/volunterRegister/:name">
+            <VolunterRegister></VolunterRegister>
+          </Route>
+      
+        </Switch>
      </Router>
     </div>
   );
