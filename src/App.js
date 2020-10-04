@@ -12,6 +12,7 @@ import VolunterCategoryAll from './components/Header/VolunterCategoryAll/Volunte
 import LogIn from './components/LogIn/LogIn';
 import VolunterRegister from './components/VolunteerRegister/VolunterRegister';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Event from './components/Event/Event';
 export const LoggedInUserContext = React.createContext()
 function App() {
   const [user, setUser] = useState({})
@@ -29,8 +30,10 @@ function App() {
           </Route>
           <PrivateRoute exact path="/volunterRegister/:name">
             <VolunterRegister></VolunterRegister>
+          </PrivateRoute >
+          <PrivateRoute exact path="/event">
+            <Event></Event>
           </PrivateRoute>
-      
         </Switch>
      </Router>
      </LoggedInUserContext.Provider>
