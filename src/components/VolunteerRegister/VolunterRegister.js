@@ -47,7 +47,7 @@ const VolunterRegister = () => {
     return (
         <div>
             <LogoHeader></LogoHeader>
-            <h2>volunter register for {name}</h2>
+           
             <div>
                 <Container>
                     <Row>

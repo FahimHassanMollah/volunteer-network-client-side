@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { LoggedInUserContext } from '../../App';
 import Header from '../Header/Header';
+import NoEvents from '../NoEvents/NoEvents';
 import UserEventsDetails from '../UserEventsDetails/UserEventsDetails';
 
 const Event = () => {
@@ -10,7 +11,7 @@ const Event = () => {
     const [reloeadPageAfterDeleteEvent, setReloeadPageAfterDeleteEvent] = useState(0);
     const [allCategories, setAllCategories] = useState([])
     const deleteEvent = (id) => {
-        console.log('working click ' + id);
+      
         fetch('http://localhost:8080/deleteEvent/' + id, {
             method: 'DELETE',
             headers: {
@@ -51,7 +52,9 @@ const Event = () => {
 
 
                     {
-                        allCategories.length > 0 && userEventsInformation.length > 0 && userEventsInformation.map((event, index) => <UserEventsDetails allCategories={allCategories} key={index} deleteEvent={deleteEvent} userEvents={event}></UserEventsDetails>)
+                       ( allCategories.length > 0 && userEventsInformation.length > 0 )? userEventsInformation.map((event, index) => <UserEventsDetails allCategories={allCategories} key={index} deleteEvent={deleteEvent} userEvents={event}></UserEventsDetails>)
+                       :
+                       <NoEvents></NoEvents>
                     }
 
 
