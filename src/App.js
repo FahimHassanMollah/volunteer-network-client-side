@@ -16,6 +16,7 @@ import Event from './components/Event/Event';
 import Blog from './components/Blog/Blog';
 import Donaition from './components/Donation/Donaition';
 import NoMatch from './components/NoMatch/NoMatch';
+import AdminVolunteerRegisterList from './components/AdminVolunteerRegisterList/AdminVolunteerRegisterList';
 export const LoggedInUserContext = React.createContext()
 function App() {
   const [user, setUser] = useState({})
@@ -43,6 +44,9 @@ function App() {
           <PrivateRoute exact path="/event">
             <Event></Event>
           </PrivateRoute>
+          <Route exact path="/volunteerRegisterlist">
+            <AdminVolunteerRegisterList></AdminVolunteerRegisterList>
+          </Route>
           <Route path="*">
             <NoMatch></NoMatch>
           </Route>

@@ -12,7 +12,10 @@ const LogIn = () => {
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
     const googleSignInBtn = () => {
-        firebase.initializeApp(firebaseConfig);
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+         }
+        
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function (result) {
             const token = result.credential.accessToken
