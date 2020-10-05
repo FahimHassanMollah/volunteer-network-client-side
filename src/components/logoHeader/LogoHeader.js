@@ -7,7 +7,6 @@ const LogoHeader = () => {
             <Container>
                 <Row>
                     <Col className="mx-auto" md={8}>
-
                         <Navbar bg="" variant="">
                             <div className="mx-auto">
                                 <Navbar.Brand>
@@ -15,12 +14,9 @@ const LogoHeader = () => {
                                         alt=""
                                         src={logo}
                                         width="200"
-
                                         className="d-inline-block align-top"
                                     />
-
                                 </Navbar.Brand>
-
                             </div>
                         </Navbar>
                     </Col>
@@ -29,5 +25,4 @@ const LogoHeader = () => {
         </div>
     );
 };
-
 export default LogoHeader;

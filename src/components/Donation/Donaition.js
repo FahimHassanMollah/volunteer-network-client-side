@@ -2,14 +2,12 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Header from '../Header/Header';
 import './Donation.css'
-
 const Donaition = () => {
     return (
         <div>
              <div>
             <Header></Header>
             <div className="">
-
                 <Container>
                     <Row>
                         <Col sm={6} className="mx-auto">
@@ -17,11 +15,9 @@ const Donaition = () => {
                         </Col>
                     </Row>
                 </Container>
-
             </div>
         </div>
         </div>
     );
 };
-
 export default Donaition;

@@ -22,7 +22,6 @@ const Header = () => {
         newuser.email="";
         setUser(newuser);
     }
-    
     return (
         <div>
             <Navbar bg="" expand="lg">
@@ -43,7 +42,6 @@ const Header = () => {
                         {
                             user.email ?
                                 <Button className="px-4 mx-2  link" variant="primary">{user.name}</Button>
-
                                 :
                                 <Link to={'/login'}>
                                     <Button className="px-4 mx-2  link" variant="primary">Register</Button>
@@ -51,11 +49,9 @@ const Header = () => {
                         }
                         {
                             user.email ? <Button onClick={logOut} className="px-4 mx-2 link" variant="dark">LogOut</Button> :
-                            
                             <Link to={'/volunteerRegisterlist'}>
                                 <Button className="px-4 mx-2 link" variant="dark">Admin</Button>
                             </Link>
-                            
                         }
                     </Navbar.Collapse>
                 </Container>

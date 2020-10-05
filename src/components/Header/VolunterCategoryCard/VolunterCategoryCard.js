@@ -3,10 +3,8 @@ import { Card, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './card.css'
 const VolunterCategoryCard = (props) => {
-
     return (
         <div>
-
             <Col md={4}>
                 <Link to={`/volunterRegister/${props.item.categoryName}`}>
                     <Card className="text-center text-white" style={{ width: '18rem' }}>
@@ -19,10 +17,7 @@ const VolunterCategoryCard = (props) => {
                     </Card>
                 </Link>
             </Col>
-
         </div>
-
     );
 };
-
 export default VolunterCategoryCard;

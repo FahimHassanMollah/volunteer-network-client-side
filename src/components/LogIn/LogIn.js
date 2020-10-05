@@ -15,7 +15,6 @@ const LogIn = () => {
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
          }
-        
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function (result) {
             const token = result.credential.accessToken
@@ -31,9 +30,7 @@ const LogIn = () => {
             const errorMessage = error.message;
             const email = error.email;
             const credential = error.credential;
-
         });
-
     }
     return (
         <div>
@@ -55,5 +52,4 @@ const LogIn = () => {
         </div>
     );
 };
-
 export default LogIn;

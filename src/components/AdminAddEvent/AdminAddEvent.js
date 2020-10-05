@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useHistory, useLocation } from 'react-router-dom';
 import AdminHeader from '../AdminHeader/AdminHeader';
-
 const AdminAddEvent = () => {
     let history = useHistory();
     let location = useLocation();
@@ -11,7 +10,7 @@ const AdminAddEvent = () => {
     const { register, handleSubmit, watch, errors, setValue } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        fetch('http://localhost:8080/singleAddVolunteerCategory', {
+        fetch('https://ancient-sierra-22860.herokuapp.com/singleAddVolunteerCategory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,7 +25,6 @@ const AdminAddEvent = () => {
                 console.error('Error:', error);
             });
     }
-
     return (
         <div>
             <AdminHeader></AdminHeader>
@@ -52,9 +50,6 @@ const AdminAddEvent = () => {
                                         <label>Event Description</label>
                                         <textarea name="description" ref={register} className="form-control" placeholder="Description" rows="4"></textarea>
                                     </div>
-
-
-
                                 </div>
                                 <button type="submit" className="btn btn-primary btn-block">Submit</button>
                             </form>
@@ -65,5 +60,4 @@ const AdminAddEvent = () => {
         </div>
     );
 };
-
 export default AdminAddEvent;

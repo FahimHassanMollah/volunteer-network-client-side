@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Button, CardColumns, CardDeck, Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
 import volunteerInformations from '../../../fakeData/fakeData';
 import VolunterCategoryCard from '../VolunterCategoryCard/VolunterCategoryCard';
+import {ClipLoader,BeatLoader,PuffLoader,BounceLoader} from "react-spinners";
 const VolunterCategoryAll = () => {
     const [volunteerInformation, setVolunteerInformation] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:8080/getVolunteerCategories')
+        fetch('https://ancient-sierra-22860.herokuapp.com/getVolunteerCategories')
             .then(res => res.json())
             .then(data => setVolunteerInformation(data))
     }, [])
@@ -32,7 +33,9 @@ const VolunterCategoryAll = () => {
                 <Row className="justify-content-md-center">
                     <CardColumns>
                         {
-                            volunteerInformation.length > 0 && volunteerInformation.map((item, index) => <VolunterCategoryCard item={item} key={index}></VolunterCategoryCard>)
+                            volunteerInformation.length > 0 ? volunteerInformation.map((item, index) => <VolunterCategoryCard item={item} key={index}></VolunterCategoryCard>)
+                            :
+                            <BeatLoader margin={2} ></BeatLoader>
                         }
                     </CardColumns>
                 </Row>

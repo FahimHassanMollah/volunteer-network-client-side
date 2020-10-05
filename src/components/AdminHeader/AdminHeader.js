@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from './facicon.png';
-
 const AdminHeader = () => {
     return (
         <div>
@@ -22,14 +21,11 @@ const AdminHeader = () => {
                             <Link to={`/addEvent`} className="px-2" >
                                 <Button  variant="outline-dark">Add event </Button>
                             </Link>
-                           
                         </Nav>
-                        
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </div>
     );
 };
-
 export default AdminHeader;
