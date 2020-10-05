@@ -10,7 +10,7 @@ const TableRow = (props) => {
                  <td>{props.user.email}</td> 
                  <td>{props.user.date}</td>
                  <td>{props.user.category} </td> 
-                 <td><Button onClick={()=>props.deleteEvent(id)} >Delete</Button></td></tr> 
+                 <td><Button className="btn-danger" onClick={()=>props.deleteEvent(id)} >Delete</Button></td></tr> 
         </>
     );
 };

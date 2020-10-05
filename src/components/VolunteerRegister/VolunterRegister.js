@@ -11,7 +11,7 @@ const VolunterRegister = () => {
     const [user, setUser] = useContext(LoggedInUserContext);
     let history = useHistory();
     let location = useLocation();
-    let { from } = { from: { pathname: "/event" } };
+    let { from } = { from: { pathname: "/addEvent" } };
     const { register, handleSubmit, watch, errors, setValue } = useForm();
 
     useEffect(() => {
